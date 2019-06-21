@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/rootCoordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <!-- app:layout_scrollFlags="scroll|enterAlways", 發生向下滾動事件時, 前者優先滾動Scrolling View, 後者優先滾動Child View, 當優先滾動的一方已經全部滾進屏幕之後, 另一方才開始滾動 -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        app:layout_scrollFlags="scroll|enterAlways">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_activity_main_search_bar"/>
+                    </FrameLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        app:tabIndicatorColor="#FFFFFF"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="#FFFFFF"
+                        app:tabTextAppearance="@style/CustomTabLayoutText"
+                        app:tabTextColor="#99FFFFFF"/>
+                </android.support.design.widget.AppBarLayout>
+
+                <!-- 列表 -->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:overScrollMode="never"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            </android.support.design.widget.CoordinatorLayout>
+
+            <!-- 添加聯絡人按鈕 -->
+            <FrameLayout
+                android:id="@+id/addContactFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/icon_activity_main_add_contact"
+                    app:maxImageSize="54dp"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- 底層功能欄 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_fragment_contact_person_home_page_bottom_bar"/>
+    </LinearLayout>
+</layout>

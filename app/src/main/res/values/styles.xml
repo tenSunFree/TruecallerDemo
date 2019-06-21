@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 自定義TabLayout的文字大小 -->
+    <style name="CustomTabLayoutText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize" tools:ignore="SpUsage">14dp</item>
+    </style>
+
+    <!-- Loading Dialog -->
+    <style name="LoadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 邊框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮現在activity之上 -->
+        <item name="android:windowNoTitle">true</item> <!-- 無標題 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item> <!-- 是否允許對話框的背景變暗 -->
+        <item name="android:backgroundDimAmount">0.8</item> <!-- 設置對話框的背景透明度 -->
+    </style>
+</resources>

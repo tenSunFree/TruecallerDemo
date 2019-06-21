@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:background="#F5ECE1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <!-- 標題欄 -->
+        <LinearLayout
+                android:background="#0087FF"
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+
+            <FrameLayout
+                    android:id="@+id/previousPageFrameLayout"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_activity_main_previous_page"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+            </FrameLayout>
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_weight="3.8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:src="@drawable/icon_activity_main_head_sculpture"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"/>
+
+                <TextView
+                        android:layout_marginStart="8dp"
+                        android:textSize="16dp"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/nameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_activity_main_phone"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"/>
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_activity_main_other"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- 訊息列表 -->
+        <FrameLayout
+                android:background="#F5ECE1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+        </FrameLayout>
+
+        <!-- 底層功能欄 -->
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp">
+
+            <android.support.v7.widget.CardView
+                    android:layout_gravity="bottom"
+                    app:cardElevation="12dp"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp">
+
+                <ImageView
+                        android:layout_gravity="bottom"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_fragment_contact_person_short_message_service_bottom_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+    </LinearLayout>
+</layout>
